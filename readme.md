@@ -20,7 +20,7 @@ a) Path to target folder
 
 -` The path to the target folder containing the files to be compressed must be: the absolute path to the folder inside your computer`
 
--Example: C:\Users\user\Desktop\folder
+-Example: C:\Users\user\Desktop\exampleFolder
 
 b) Path to the destination folder
 
