@@ -1,4 +1,5 @@
 const readline = require("readline-sync");
+const { folderHandler } = require("./utils/foldersHandler");
 
 let rootPath = readline.question("\x1b[34m Type the folder you want to compress: \x1b[0m");
 let excludingFiles = readline.question(
