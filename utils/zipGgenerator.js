@@ -2,7 +2,7 @@ const fs = require("fs");
 const archiver = require("archiver");
 
 const zipGgenerator = (directoryToCompress, files, destinationFolder) => {
-  const output = fs.createWriteStream(`${destinationFolder}/compressed_images.zip`);
+  const output = fs.createWriteStream(`${destinationFolder}/compressed.zip`);
   const archive = archiver("zip");
 
   output.on("close", function () {
