@@ -1,9 +1,12 @@
 const readline = require("readline-sync");
 const { folderHandler } = require("./utils/foldersHandler");
 
-let rootPath = readline.question(
-  "\x1b[34m Type the Absolute path in your computer to folder you want to compress: \x1b[0m"
-);
+let rootPath = "./utils/exampleFolder";
+rootPath !== undefined || rootPath !== ""
+  ? readline.question(
+      "\x1b[34m Type the Absolute path in your computer to folder you want to compress (As default it is ./utils/exampleFolder): \x1b[0m"
+    )
+  : "./utils/exampleFolder";
 let excludingFiles = readline.question(
   "\x1b[34m Are there any files to be excluded for compression: \x1b[0m"
 );
@@ -14,15 +17,14 @@ if (excludingFiles) {
   );
 }
 
-let destinationFolder = "./generatedZipFile";
-let customDestinationFolder = readline.question(
-  "\x1b[34m where do you want to store the compressed folder?( As default it is stored at ./generatedZipFile): \x1b[0m"
-);
-console.log("#-----------------------------------------------#\n  ");
+let customDestinationFolder = "./generatedZipFile";
 
-customDestinationFolder !== undefined || customDestinationFolder !== ""
-  ? (destinationFolder = customDestinationFolder)
+customDestinationFolder !== undefined
+  ? readline.question(
+      "\x1b[34m where do you want to store the compressed folder?( As default it is stored at ./generatedZipFile): \x1b[0m"
+    )
   : "./generatedZipFile";
+console.log("#-----------------------------------------------#\n  ");
 
 // Parse folder
 folderHandler(rootPath, excludedWord, customDestinationFolder);

@@ -6,7 +6,8 @@ const zipGgenerator = (directoryToCompress, files, destinationFolder) => {
   const archive = archiver("zip");
 
   output.on("close", function () {
-    console.log(`\n\x1b[42m  Files compressed for the path: ${directoryToCompress} \x1b[0m \n`);
+    console.log(`\n\x1b[42m  FINISHED \x1b[0m \n`);
+    console.log(`\n\x1b[33m  Files compressed at: ${destinationFolder} \x1b[0m \n`);
   });
 
   archive.on("error", function (err) {
