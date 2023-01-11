@@ -1,0 +1,20 @@
+{
+  "name": "sendimages-node",
+  "version": "3.0.0",
+  "description": "App to send images to plates",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sendImages": " node index.js",
+    "generateZip": " node ./generateZipFile/foldersHandler.js"
+  },
+  "author": "daniel.garrido@betterask.erni",
+  "license": "ISC",
+  "dependencies": {
+    "archiver": "^5.3.1",
+    "fs": "0.0.1-security",
+    "node-fetch": "^2.0.0",
+    "readline-sync": "^1.4.10",
+    "request": "^2.88.2"
+  }
+}
