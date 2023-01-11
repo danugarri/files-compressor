@@ -18,13 +18,14 @@ if (excludingFiles === "y" || excludingFiles === "Y") {
   );
 }
 // Destination folder
-let customDestinationFolder = "./generatedZipFile";
-
-customDestinationFolder !== undefined
-  ? readline.question(
-      "\x1b[34m where do you want to store the compressed folder?\n( As default it is stored at ./generatedZipFile): \x1b[0m"
-    )
-  : "./generatedZipFile";
+const defaultDestinationFolder = "./generatedZipFile";
+let customDestinationFolder = null;
+const destinationFolderInput = readline.question(
+  "\x1b[34m where do you want to store the compressed folder?\n( As default it is stored at ./generatedZipFile): \x1b[0m"
+);
+destinationFolderInput !== defaultDestinationFolder || destinationFolderInput !== ""
+  ? (customDestinationFolder = destinationFolderInput)
+  : defaultDestinationFolder;
 console.log("#-----------------------------------------------#\n  ");
 
 // call to Parse folder

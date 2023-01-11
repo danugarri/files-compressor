@@ -8,7 +8,7 @@
 
 npm run generateZip
 
-# 2.2 Folder to be compressed
+# 2.2 Inputs
 
 The folder to be compressed must have a content similar to:
 
@@ -20,6 +20,10 @@ a) Path to target folder
 
 -` The path to the target folder containing the files to be compressed must be: the absolute path to the folder inside your computer`
 
+-Example: C:\Users\user\Desktop\folder
+
 b) Path to the destination folder
 
 - `the absolute path to the folder inside your computer`
+
+-Example: C:\Users\user\Desktop
