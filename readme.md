@@ -2,12 +2,24 @@
 
 1. npm install
 
-2. The folder to be compressed must have the following content:
+2. Initialising the compressor program:
+
+# 2.1 start
+
+npm run generateZip
+
+# 2.2 Folder to be compressed
+
+The folder to be compressed must have a content similar to:
 
 -`ej: file1,file2,file3,file4`
 
-3. Initialising the compressor program:
+# 2.3
 
-# 3.1 start
+a) Path to target folder
 
-npm run generateZip
+-` The path to the target folder containing the files to be compressed must be: the absolute path to the folder inside your computer`
+
+b) Path to the destination folder
+
+- `the absolute path to the folder inside your computer`
