@@ -20,13 +20,6 @@ const zipGgenerator = (directoryToCompress, files, destinationFolder) => {
     const absolutePath = `${directoryToCompress}/${file}`;
     archive.append(fs.createReadStream(absolutePath), { name: file });
   });
-  /* Only if we want to compress everything inside the directory
-    // append files from a sub-directory, putting its contents at the root of archive
-    // archive.directory(directoryToCompress, true);
-  */
-
-  // append files from a sub-directory and naming it "compressed" within the archive
-  // archive.directory("subdir/", "compressed");
 
   archive.finalize();
 };
