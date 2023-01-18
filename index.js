@@ -12,20 +12,13 @@ if (typeof pathInput === "string" && pathInput === "") {
 }
 if (pathInput !== "") {
   rootPath = pathInput;
+  console.log(`\x1b[35m selected path: ${rootPath} \n\x1b[0m`);
 }
 
 //   Files to be excluded
 let excludingFiles = readline.question(
   "\x1b[34m Are there any files to be excluded for compression (y/n): \x1b[0m"
 );
-while (excludingFiles.toLowerCase() !== "y" || excludingFiles.toLowerCase() !== "n") {
-  excludingFiles = readline.question(
-    "\x1b[34m Are there any files to be excluded for compression (y/n): \x1b[0m"
-  );
-  if (excludingFiles.toLowerCase() === "y" || excludingFiles.toLowerCase() === "n") {
-    break;
-  }
-}
 
 let excludedWord = null;
 if (excludingFiles.toLowerCase() === "y") {
